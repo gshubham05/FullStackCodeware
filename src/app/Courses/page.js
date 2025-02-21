@@ -64,7 +64,7 @@ export default function GenerativeAIBanner() {
     return (
         <div>
             {/* Heading section  */}
-            <div className="relative w-full h-[320px] mt-20 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white text-center">
+            <div className="relative w-full h-[320px] mt-20  bg-gradient-to-r from-blue-800 to-purple-900 flex items-center justify-center text-white text-center">
                 <div className="relative z-10 max-w-3xl">
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">Empower Your Future with Codeware IT</h1>
                     <p className="text-lg md:text-xl">Master the Latest Technologies & Elevate Your Career with CodeWare IT</p>
