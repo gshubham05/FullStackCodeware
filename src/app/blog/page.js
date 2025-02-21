@@ -43,21 +43,8 @@ const blogPosts = [
       name: "Emma Wilson",
       avatar: "/instructor-3.jpg"
     }
-  },
-  { 
-    id: 4, 
-    title: "Become Job-Ready with React", 
-    slug: "job-ready-react", 
-    description: "Master React Hooks, Redux Toolkit, and Next.js for frontend roles",
-    category: "Frontend Development",
-    date: "May 10, 2024",
-    readTime: "7 min read",
-    image: "/course-banner-3.jpg",
-    author: {
-      name: "Emma Wilson",
-      avatar: "/instructor-3.jpg"
-    }
   }
+  
   
 ];
 
