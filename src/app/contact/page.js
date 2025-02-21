@@ -12,7 +12,7 @@ export default function ContactUs() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center bg-gray-100 overflow-hidden mt-[1rem] border-b-2 sm:mt-[4rem]">
+    <div className="relative w-full min-h-screen flex items-center justify-center bg-gray-100 overflow-hidden mt-[1rem] border-b-2 ">
       {/* Full-Screen Background with Wave Design */}
       <div className="absolute top-0 left-0 w-full h-full">
         <svg
@@ -30,7 +30,7 @@ export default function ContactUs() {
 
       {/* Main Section (Now Full Width) */}
       <div
-        className={`relative w-full h-screen flex items-center justify-center bg-blue-900 text-white transition-all duration-700 ${
+        className={`relative w-full min-h-screen flex items-center justify-center bg-blue-900 text-white transition-all duration-700 ${
           isOpen ? "h-auto py-12 px-10" : "cursor-pointer"
         }`}
         onClick={() => setIsOpen(true)}
@@ -39,9 +39,9 @@ export default function ContactUs() {
           // Before Click (Covers Full Width)
           <div className="relative w-full h-full flex flex-col items-center justify-center text-center">
             {/* Floating Circles */}
-            <div className="absolute top-6 left-6 w-20 h-20 bg-white opacity-30 rounded-full animate-bounce"></div>
-            <div className="absolute bottom-6 right-6 w-24 h-24 bg-white opacity-20 rounded-full animate-ping"></div>
-            <div className="absolute bottom-20 left-20 w-16 h-16 bg-white opacity-25 rounded-full animate-pulse"></div>
+            <div className="absolute top-[-12rem] sm:top-[-5rem] left-6 w-20 h-20 bg-white opacity-30 rounded-full animate-bounce"></div>
+            <div className="absolute  bottom-[-14rem] sm:bottom-[-5rem] right-6 w-24 h-24 bg-white opacity-20 rounded-full animate-ping"></div>
+            <div className="absolute bottom-[-7.5rem] sm:bottom-[-3rem] left-20 w-16 h-16 bg-white opacity-25 rounded-full animate-pulse"></div>
 
             <h2 className="text-3xl font-extrabold relative z-10 leading-tight sm:text-6xl">
               Let's Build Your Future <br /> with{" "}
@@ -63,7 +63,7 @@ export default function ContactUs() {
           </div>
         ) : (
           // Contact Form Content (Full Width & Beautiful Layout)
-          <div className="container mx-auto py-12">
+          <div className="container mx-auto px-6 py-12">
             <div className="flex flex-col md:flex-row gap-10">
               {/* Left Side - Company Info */}
               <div className="md:w-1/2 order-2 md:order-1">
