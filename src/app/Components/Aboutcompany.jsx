@@ -40,8 +40,12 @@ export default function HeroSection() {
         {/* Left Content */}
         <div className="animate-fadeInLeft">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
-            Elevate Your <span className="text-blue-600">{displayText}</span>_
-            with Codeware IT
+            Elevate Your{" "}
+            <span className="text-blue-600">
+              <br></br>
+              {displayText}
+            </span>
+            <br></br>with Codeware IT
           </h1>
           <p className="mt-6 text-gray-700 text-lg">
             Codeware IT Pvt Ltd empowers aspiring developers with top-notch

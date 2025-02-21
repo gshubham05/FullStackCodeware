@@ -8,8 +8,9 @@ import {
   FaLinkedin,
   FaMapMarkerAlt,
   FaEnvelope,
-  FaPhone,
+  FaPhoneAlt,
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -29,10 +30,18 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg">Courses</h3>
           <ul className="mt-2 space-y-2 text-gray-300">
-            <li>Full Stack Development</li>
-            <li>Python Programming</li>
-            <li>Java Development</li>
-            <li>Data Structures & Algorithms</li>
+            <li>
+              <Link href="/courses/full-stack">Full Stack Development</Link>
+            </li>
+            <li>
+              <Link href="/courses/python">Python Programming</Link>
+            </li>
+            <li>
+              <Link href="/courses/java">Java Development</Link>
+            </li>
+            <li>
+              <Link href="/courses/dsa">Data Structures & Algorithms</Link>
+            </li>
           </ul>
         </div>
 
@@ -40,11 +49,21 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg">Quick Links</h3>
           <ul className="mt-2 space-y-2 text-gray-300">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Courses</li>
-            <li>Contact</li>
-            <li>Blog</li>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/about">About Us</Link>
+            </li>
+            <li>
+              <Link href="/Courses">Courses</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
           </ul>
         </div>
 
@@ -61,7 +80,7 @@ export default function Footer() {
               <FaEnvelope className="inline mr-2" /> info@codewareit.com
             </li>
             <li>
-              <FaPhone className="inline mr-2" /> +91 9837218345
+              <FaPhoneAlt className="inline mr-2" /> +91 9837218345
             </li>
           </ul>
         </div>
