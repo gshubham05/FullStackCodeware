@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import Whatsappicon from "./Components/Whatsappicon";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +28,8 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Whatsappicon />
+        <Footer />
       </body>
     </html>
   );

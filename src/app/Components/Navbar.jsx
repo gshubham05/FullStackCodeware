@@ -37,7 +37,7 @@ export default function Navbar() {
               alt="logo"
               className="pt-1"
             />
-            <h1 className="text-2xl font-bold text-blue-800">CodewareIT</h1>
+            <h1 className="text-2xl font-bold text-[#2563EB]">CodewareIT</h1>
           </div>
 
           {/* Mobile Menu Button (Changes Between ☰ and ✕) */}
@@ -97,8 +97,8 @@ export default function Navbar() {
 
       {/* Mobile Menu - Now Starts Below Navbar */}
       {isOpen && (
-        <div className="fixed top-[5rem] left-0 w-full h-screen bg-white z-40 p-4 md:hidden">
-          <ul className="mt-8 text-gray-600">
+        <div className="fixed top-[5rem] left-0 w-full h-screen bg-[url('/mobileimg.jpg')]  z-40 p-4 md:hidden">
+          <ul className="mt-8 text-white">
             <li className="py-2">
               <Link href="#" onClick={toggleMobileMenu}>
                 Home
@@ -118,7 +118,7 @@ export default function Navbar() {
                     openMenu === "MobileCourses" ? null : "MobileCourses"
                   )
                 }
-                className="flex items-center space-x-1 w-full text-left"
+                className="flex items-center justify-between w-full text-left"
               >
                 <span>Courses</span>
                 <FaChevronDown
@@ -128,7 +128,7 @@ export default function Navbar() {
                 />
               </button>
               {openMenu === "MobileCourses" && (
-                <ul className="mt-2 bg-gray-100 rounded-lg p-2">
+                <ul className="mt-2 text-black font-bold bg-gray-100 rounded-lg p-2">
                   <li className="py-2 px-4 hover:bg-gray-200">
                     <Link href="#" onClick={toggleMobileMenu}>
                       Full Stack Development
