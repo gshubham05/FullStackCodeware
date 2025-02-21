@@ -63,7 +63,7 @@ export default function ContactUs() {
           </div>
         ) : (
           // Contact Form Content (Full Width & Beautiful Layout)
-          <div className="container mx-auto px-6 py-12">
+          <div className="container mx-auto py-12">
             <div className="flex flex-col md:flex-row gap-10">
               {/* Left Side - Company Info */}
               <div className="md:w-1/2 order-2 md:order-1">
