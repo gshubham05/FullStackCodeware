@@ -61,7 +61,7 @@ export default function Navbar() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link href="/Aboutus">About Us</Link>
             </li>
 
             {/* Courses Dropdown */}
@@ -77,15 +77,47 @@ export default function Navbar() {
                 <FaChevronDown className="text-gray-500" />
               </Link>
               {openMenu === "Courses" && (
-                <div className="absolute mt-2 bg-white text-black shadow-lg rounded-lg w-56">
+                <div className="absolute mt-2 bg-white text-black shadow-lg rounded-lg w-80">
                   <ul className="p-2">
                     <li className="px-4 py-2 hover:bg-gray-100">
-                      <Link href="/courses/full-stack">
-                        Full Stack Development
+                      <Link href="/Courses/full-stack-development">
+                        FULL STACK DEVELOPMENT
                       </Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                      <Link href="/courses/mern">MERN Stack</Link>
+                      <Link href="/Courses/mern-stack-development">
+                        MERN STACK DEVELOPMENT
+                      </Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/Courses/programming-languages">
+                        PROGRAMMING LANGUAGES
+                      </Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/Courses/mean-stack-development">
+                        MEAN STACK DEVELOPMENT
+                      </Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/Courses/industrial-training">
+                        INDUSTRIAL TRAINING
+                      </Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/Courses/seo-digital-marketing">
+                        SEO AND DIGITAL MARKETING
+                      </Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/Courses/graphic-design">
+                        GRAPHIC DESIGNING
+                      </Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/Courses/data-structures-algorithms">
+                        DATA STRUCTURE AND ALGORITHMS
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -117,39 +149,15 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="py-2">
-              <Link href="/about" onClick={toggleMobileMenu}>
+              <Link href="/Aboutus" onClick={toggleMobileMenu}>
                 About Us
               </Link>
             </li>
 
-            {/* Mobile Courses Dropdown */}
             <li className="py-2 relative">
-              <Link
-                href="/Courses"
-                onClick={toggleMobileMenu}
-                className="flex items-center justify-between w-full text-left"
-              >
-                <span>Courses</span>
-                <FaChevronDown
-                  className={`text-gray-500 ${
-                    openMenu === "MobileCourses" ? "rotate-180" : ""
-                  }`}
-                />
+              <Link href="/Courses" onClick={toggleMobileMenu}>
+                Courses
               </Link>
-              {openMenu === "MobileCourses" && (
-                <ul className="mt-2 text-black font-bold bg-gray-100 rounded-lg p-2">
-                  <li className="py-2 px-4 hover:bg-gray-200">
-                    <Link href="/courses/full-stack" onClick={toggleMobileMenu}>
-                      Full Stack Development
-                    </Link>
-                  </li>
-                  <li className="py-2 px-4 hover:bg-gray-200">
-                    <Link href="/courses/mern" onClick={toggleMobileMenu}>
-                      MERN Stack
-                    </Link>
-                  </li>
-                </ul>
-              )}
             </li>
 
             <li className="py-2">

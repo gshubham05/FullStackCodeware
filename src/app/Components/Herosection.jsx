@@ -44,11 +44,17 @@ export default function HeroBanner() {
         </p>
 
         {/* Buttons */}
-        <div className="mt-6 flex justify-center">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg shadow-lg transition-transform transform hover:scale-105">
-            Get Started
-          </button>
-        </div>
+        <a
+          href="https://wa.me/9837218345"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="mt-6 flex justify-center">
+            <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg shadow-lg transition-transform transform hover:scale-105">
+              Get Started
+            </button>
+          </div>
+        </a>
       </div>
     </section>
   );

@@ -31,16 +31,24 @@ export default function Footer() {
           <h3 className="font-bold text-lg">Courses</h3>
           <ul className="mt-2 space-y-2 text-gray-300">
             <li>
-              <Link href="/courses/full-stack">Full Stack Development</Link>
+              <Link href="/Courses/full-stack-development">
+                FULL STACK DEVELOPMENT
+              </Link>
             </li>
             <li>
-              <Link href="/courses/python">Python Programming</Link>
+              <Link href="/Courses/mern-stack-development">
+                MERN STACK DEVELOPMENT
+              </Link>
             </li>
             <li>
-              <Link href="/courses/java">Java Development</Link>
+              <Link href="/Courses/programming-languages">
+                PROGRAMMING LANGUAGES
+              </Link>
             </li>
             <li>
-              <Link href="/courses/dsa">Data Structures & Algorithms</Link>
+              <Link href="/Courses/industrial-training">
+                INDUSTRIAL TRAINING
+              </Link>
             </li>
           </ul>
         </div>
@@ -53,7 +61,7 @@ export default function Footer() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link href="/Aboutus">About Us</Link>
             </li>
             <li>
               <Link href="/Courses">Courses</Link>
