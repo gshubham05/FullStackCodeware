@@ -4,8 +4,9 @@ import courses from "../data";
 import { Bookmark, Calendar, GraduationCap, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
-export default function CourseDetails({ params }) {
-  const course = courses.find((c) => c.id === params.id);
+export default async function CourseDetails({ params }) {
+  const { id } = await params; // Ensure params is awaited properly
+  const course = courses.find((c) => c.id.toString() === id);
 
   if (!course) return notFound();
 
@@ -80,7 +81,6 @@ export default function CourseDetails({ params }) {
         </div>
 
         {/* Call to Action */}
-
         <div className="mt-8 flex justify-center">
           <a
             href={`https://wa.me/9837218345?text=I'm%20interested%20in%20the%20${encodeURIComponent(

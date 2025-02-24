@@ -1,46 +1,48 @@
 import React from "react";
+import Link from "next/link";
 
 const courses = [
   {
     name: "MERN Stack",
     icon: "🔥",
-    description:"Master MongoDB, Express.js, React, and Node.js to become a full-stack developer.",
-    link: "#mern",
+    description:
+      "Master MongoDB, Express.js, React, and Node.js to become a full-stack developer.",
+    link: "Courses/mern-stack-development",
   },
   {
     name: "Full Stack",
     icon: "💻",
     description:
       "Comprehensive training in front-end and back-end technologies for full-stack development.",
-    link: "#fullstack",
+    link: "Courses/full-stack-development",
   },
   {
     name: "Programming Language",
     icon: "👨‍💻",
     description:
       "Learn essential programming languages like Python, Java, C++, and more.",
-    link: "#programming",
+    link: "Courses/programming-languages",
   },
   {
     name: "Industrial Training",
     icon: "🏭",
     description:
       "Hands-on industry experience with real-world projects and mentorship.",
-    link: "#industrial",
+    link: "Courses/industrial-training",
   },
   {
     name: "Graphic Design",
     icon: "🎨",
     description:
       "Enhance your creativity with Photoshop, Illustrator, and other design tools.",
-    link: "#graphic",
+    link: "Courses/graphic-design",
   },
   {
     name: "SEO & Digital Marketing",
     icon: "📈",
     description:
       "Optimize web presence and master digital marketing strategies.",
-    link: "#seo",
+    link: "Courses/seo-digital-marketing",
   },
 ];
 
@@ -79,9 +81,11 @@ const CoursesSection = () => {
       </div>
 
       {/* Visit All Button */}
-      <button className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
-        Visit All
-      </button>
+      <Link href="/Courses">
+        <button className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+          Visit All
+        </button>
+      </Link>
     </div>
   );
 };

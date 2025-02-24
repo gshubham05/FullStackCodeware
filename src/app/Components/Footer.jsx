@@ -72,6 +72,9 @@ export default function Footer() {
             <li>
               <Link href="/blog">Blog</Link>
             </li>
+            <li>
+              <Link href="/Team">Team</Link>
+            </li>
           </ul>
         </div>
 
@@ -96,19 +99,28 @@ export default function Footer() {
 
       {/* Social Media */}
       <div className="mt-8 flex justify-center space-x-6">
-        <a href="#" className="text-gray-300 hover:text-white text-2xl">
+        <a
+          href="https://www.facebook.com/share/1FKkhHpFEx/?mibextid=qi2Omg"
+          className="text-gray-300 hover:text-white text-2xl"
+        >
           <FaFacebookF />
         </a>
-        <a href="#" className="text-gray-300 hover:text-white text-2xl">
+        {/* <a href="#" className="text-gray-300 hover:text-white text-2xl">
           <FaTwitter />
         </a>
         <a href="#" className="text-gray-300 hover:text-white text-2xl">
           <FaYoutube />
-        </a>
-        <a href="#" className="text-gray-300 hover:text-white text-2xl">
+        </a> */}
+        <a
+          href="https://www.instagram.com/codewareit.in?igsh=dnA3c3l5OWZpZGdx"
+          className="text-gray-300 hover:text-white text-2xl"
+        >
           <FaInstagram />
         </a>
-        <a href="#" className="text-gray-300 hover:text-white text-2xl">
+        <a
+          href="https://www.linkedin.com/company/codeware-it-dehradun/"
+          className="text-gray-300 hover:text-white text-2xl"
+        >
           <FaLinkedin />
         </a>
       </div>

@@ -2,57 +2,58 @@ import Link from "next/link";
 import Image from "next/image";
 
 const blogPosts = [
-  { 
-    id: 1, 
-    title: "Master Full-Stack Development in 2024", 
-    slug: "fullstack-web-dev", 
-    description: "Learn to build modern web applications with React, Node.js, and PostgreSQL",
+  {
+    id: 1,
+    title: "Master Full-Stack Development in 2024",
+    slug: "fullstack-web-dev",
+    description:
+      "Learn to build modern web applications with React, Node.js, and PostgreSQL",
     category: "Web Development",
     date: "May 15, 2024",
     readTime: "8 min read",
     image: "/course-banner-1.jpg",
     author: {
       name: "Sarah Johnson",
-      avatar: "/instructor-1.jpg"
-    }
+      avatar: "/instructor-1.jpg",
+    },
   },
-  { 
-    id: 2, 
-    title: "Python for Automation & Data Science", 
-    slug: "python-automation", 
-    description: "Transform your career with Python programming and data analysis",
+  {
+    id: 2,
+    title: "Python for Automation & Data Science",
+    slug: "python-automation",
+    description:
+      "Transform your career with Python programming and data analysis",
     category: "Programming",
     date: "May 12, 2024",
     readTime: "6 min read",
     image: "/course-banner-2.jpg",
     author: {
       name: "Mike Chen",
-      avatar: "/instructor-2.jpg"
-    }
+      avatar: "/instructor-2.jpg",
+    },
   },
-  { 
-    id: 3, 
-    title: "Become Job-Ready with React", 
-    slug: "job-ready-react", 
-    description: "Master React Hooks, Redux Toolkit, and Next.js for frontend roles",
+  {
+    id: 3,
+    title: "Become Job-Ready with React",
+    slug: "job-ready-react",
+    description:
+      "Master React Hooks, Redux Toolkit, and Next.js for frontend roles",
     category: "Frontend Development",
     date: "May 10, 2024",
     readTime: "7 min read",
     image: "/course-banner-3.jpg",
     author: {
       name: "Emma Wilson",
-      avatar: "/instructor-3.jpg"
-    }
-  }
-  
-  
+      avatar: "/instructor-3.jpg",
+    },
+  },
 ];
 
 export default function Blog() {
   const featuredPost = blogPosts[0];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 mt-[5rem]">
       {/* Enhanced Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-800 to-purple-900 text-white py-24 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -60,7 +61,8 @@ export default function Blog() {
             Launch Your Tech Career with Codeware
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-95 max-w-2xl mx-auto">
-            Industry-focused offline & online courses in programming and web development
+            Industry-focused offline & online courses in programming and web
+            development
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-transform transform hover:scale-105 shadow-lg">
@@ -92,15 +94,27 @@ export default function Blog() {
               <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-2">
                 {featuredPost.title}
               </h2>
-              <p className="text-lg opacity-90 mb-6">{featuredPost.description}</p>
+              <p className="text-lg opacity-90 mb-6">
+                {featuredPost.description}
+              </p>
               <div className="flex items-center justify-between">
                 <Link
                   href={`/blog/${featuredPost.slug}`}
                   className="flex items-center gap-2 text-white hover:text-blue-200 transition-colors"
                 >
                   <span className="font-semibold">Read Full Article</span>
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </Link>
                 <div className="flex items-center gap-2 text-sm opacity-90">
@@ -124,10 +138,13 @@ export default function Blog() {
         <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">
           Latest Course Updates & Articles
         </h3>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <article key={post.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+            <article
+              key={post.id}
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+            >
               <div className="relative overflow-hidden rounded-t-xl">
                 <Image
                   src={post.image}
@@ -140,19 +157,19 @@ export default function Blog() {
                   {post.category}
                 </span>
               </div>
-              
+
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
                   <span>{post.date}</span>
                   <span>{post.readTime}</span>
                 </div>
-                
+
                 <h2 className="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h2>
-                
+
                 <p className="text-gray-600 mb-4">{post.description}</p>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Image
@@ -162,15 +179,27 @@ export default function Blog() {
                       height={40}
                       className="w-8 h-8 rounded-full"
                     />
-                    <span className="text-sm text-gray-600">{post.author.name}</span>
+                    <span className="text-sm text-gray-600">
+                      {post.author.name}
+                    </span>
                   </div>
-                  <Link 
+                  <Link
                     href={`/blog/${post.slug}`}
                     className="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
                   >
                     Read More
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
                     </svg>
                   </Link>
                 </div>
@@ -185,9 +214,13 @@ export default function Blog() {
             ← Previous
           </button>
           {[1, 2, 3].map((page) => (
-            <button 
+            <button
               key={page}
-              className={`px-4 py-2 rounded-lg ${page === 1 ? 'bg-blue-600 text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+              className={`px-4 py-2 rounded-lg ${
+                page === 1
+                  ? "bg-blue-600 text-white"
+                  : "text-gray-600 hover:bg-gray-100"
+              }`}
             >
               {page}
             </button>
@@ -208,7 +241,7 @@ export default function Blog() {
             <p className="text-lg mb-8 opacity-90">
               Join 5,000+ successful alumni working in top tech companies
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white/10 p-6 rounded-xl">
                 <h3 className="text-2xl font-bold mb-2">1000+</h3>
@@ -243,12 +276,13 @@ export default function Blog() {
             Get Course Updates & Career Tips
           </h3>
           <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-            Subscribe to our newsletter and get exclusive content directly in your inbox
+            Subscribe to our newsletter and get exclusive content directly in
+            your inbox
           </p>
           <div className="max-w-md mx-auto flex gap-2">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
+            <input
+              type="email"
+              placeholder="Enter your email"
               className="flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
