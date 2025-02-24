@@ -4,8 +4,7 @@ const courses = [
   {
     name: "MERN Stack",
     icon: "🔥",
-    description:
-      "Master MongoDB, Express.js, React, and Node.js to become a full-stack developer.",
+    description:"Master MongoDB, Express.js, React, and Node.js to become a full-stack developer.",
     link: "#mern",
   },
   {
