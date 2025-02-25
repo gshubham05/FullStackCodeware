@@ -8,8 +8,9 @@ import {
   FaLinkedin,
   FaMapMarkerAlt,
   FaEnvelope,
-  FaPhone,
+  FaPhoneAlt,
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -29,10 +30,26 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg">Courses</h3>
           <ul className="mt-2 space-y-2 text-gray-300">
-            <li>Full Stack Development</li>
-            <li>Python Programming</li>
-            <li>Java Development</li>
-            <li>Data Structures & Algorithms</li>
+            <li>
+              <Link href="/Courses/full-stack-development">
+                FULL STACK DEVELOPMENT
+              </Link>
+            </li>
+            <li>
+              <Link href="/Courses/mern-stack-development">
+                MERN STACK DEVELOPMENT
+              </Link>
+            </li>
+            <li>
+              <Link href="/Courses/programming-languages">
+                PROGRAMMING LANGUAGES
+              </Link>
+            </li>
+            <li>
+              <Link href="/Courses/industrial-training">
+                INDUSTRIAL TRAINING
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -40,11 +57,24 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg">Quick Links</h3>
           <ul className="mt-2 space-y-2 text-gray-300">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Courses</li>
-            <li>Contact</li>
-            <li>Blog</li>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/Aboutus">About Us</Link>
+            </li>
+            <li>
+              <Link href="/Courses">Courses</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link href="/Team">Team</Link>
+            </li>
           </ul>
         </div>
 
@@ -61,7 +91,7 @@ export default function Footer() {
               <FaEnvelope className="inline mr-2" /> info@codewareit.com
             </li>
             <li>
-              <FaPhone className="inline mr-2" /> +91 9837218345
+              <FaPhoneAlt className="inline mr-2" /> +91 9837218345
             </li>
           </ul>
         </div>
@@ -69,19 +99,28 @@ export default function Footer() {
 
       {/* Social Media */}
       <div className="mt-8 flex justify-center space-x-6">
-        <a href="#" className="text-gray-300 hover:text-white text-2xl">
+        <a
+          href="https://www.facebook.com/share/1FKkhHpFEx/?mibextid=qi2Omg"
+          className="text-gray-300 hover:text-white text-2xl"
+        >
           <FaFacebookF />
         </a>
-        <a href="#" className="text-gray-300 hover:text-white text-2xl">
+        {/* <a href="#" className="text-gray-300 hover:text-white text-2xl">
           <FaTwitter />
         </a>
         <a href="#" className="text-gray-300 hover:text-white text-2xl">
           <FaYoutube />
-        </a>
-        <a href="#" className="text-gray-300 hover:text-white text-2xl">
+        </a> */}
+        <a
+          href="https://www.instagram.com/codewareit.in?igsh=dnA3c3l5OWZpZGdx"
+          className="text-gray-300 hover:text-white text-2xl"
+        >
           <FaInstagram />
         </a>
-        <a href="#" className="text-gray-300 hover:text-white text-2xl">
+        <a
+          href="https://www.linkedin.com/company/codeware-it-dehradun/"
+          className="text-gray-300 hover:text-white text-2xl"
+        >
           <FaLinkedin />
         </a>
       </div>
