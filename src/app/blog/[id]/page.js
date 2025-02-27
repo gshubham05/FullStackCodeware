@@ -1,11 +1,15 @@
 import { notFound } from 'next/navigation';
-import { blogPosts } from '../data'; // Import the blog data
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function BlogPost({ params }) {
-  const { id } = params; // Get post ID from URL
-  const post = blogPosts.find((p) => p.id === id); // Find the matching post
+async function getBlogPost(id) {
+  const { blogPosts } = await import('../data'); // Dynamically import the blog data
+  return blogPosts.find((p) => p.id === id) || null;
+}
+
+export default async function BlogPost({ params }) {
+  const { id } = await params; // Get post ID from URL
+  const post = await getBlogPost(id); // Fetch the post data asynchronously
 
   if (!post) {
     return notFound(); // Show 404 page if post not found

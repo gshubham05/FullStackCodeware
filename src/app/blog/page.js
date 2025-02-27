@@ -18,11 +18,15 @@ export default function Blog() {
             Industry-focused offline & online courses in programming and web development
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-transform transform hover:scale-105 shadow-lg">
+           <Link href= "/Courses"> 
+           <button className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-transform transform hover:scale-105 shadow-lg">
               Explore Courses
             </button>
+           </Link>
             <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-900 transition">
+              <Link href= "/contact">
               Book Free Demo
+              </Link>
             </button>
           </div>
         </div>
@@ -126,7 +130,7 @@ export default function Blog() {
           </p>
           <div className="max-w-md mx-auto flex gap-2">
             <input 
-              type="email" 
+x              type="email" 
               placeholder="Enter your email" 
               className="flex-1 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
