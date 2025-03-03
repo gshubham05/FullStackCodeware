@@ -74,9 +74,13 @@ export default function GenerativeAIBanner() {
             Master the Latest Technologies & Elevate Your Career with CodeWare
             IT
           </p>
-          <button className="mt-6 px-5 py-3 md:px-6 md:py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 transition duration-300">
-            Enroll Now
-          </button>
+          <a
+            href="https://wa.me/9837218345"
+            target="_blank">
+            <button className="mt-6 px-5 py-3 md:px-6 md:py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow-md hover:bg-gray-200 transition duration-300">
+              Enroll Now
+            </button>
+          </a>
         </div>
       </div>
 
