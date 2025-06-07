@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import axios from "axios"; // install axios if not installed: npm i axios
 import {
   FaUser,
   FaEnvelope,
@@ -10,6 +11,41 @@ import {
 
 export default function ContactUs() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // State to hold form data
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  // State for success message
+  const [successMsg, setSuccessMsg] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  // Handle input changes
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle form submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSuccessMsg("");
+    setErrorMsg("");
+
+    try {
+      // Post form data to your backend API route
+      await axios.post("http://localhost:5000/api/students", formData);
+
+      setSuccessMsg("Message sent successfully!");
+      // Reset form
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      setErrorMsg("Failed to send message. Please try again.");
+    }
+  };
 
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center bg-gray-100 overflow-hidden mt-[1rem] border-b-2 ">
@@ -104,13 +140,17 @@ export default function ContactUs() {
                 <h2 className="text-3xl font-bold mb-5 text-blue-900">
                   Send Us a Message
                 </h2>
-                <form className="space-y-5">
+
+                <form className="space-y-5" onSubmit={handleSubmit}>
                   <div className="flex items-center border rounded-lg px-4 py-3 transition-all duration-300 focus-within:border-blue-500">
                     <FaUser className="text-gray-500 mr-3" />
                     <input
                       type="text"
+                      name="name"
                       placeholder="Your Name"
                       className="w-full outline-none bg-transparent text-lg"
+                      value={formData.name}
+                      onChange={handleChange}
                       required
                     />
                   </div>
@@ -118,8 +158,11 @@ export default function ContactUs() {
                     <FaEnvelope className="text-gray-500 mr-3" />
                     <input
                       type="email"
+                      name="email"
                       placeholder="Your Email"
                       className="w-full outline-none bg-transparent text-lg"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                     />
                   </div>
@@ -127,19 +170,40 @@ export default function ContactUs() {
                     <FaPhone className="text-gray-500 mr-3" />
                     <input
                       type="tel"
+                      name="phone"
                       placeholder="Your Phone"
                       className="w-full outline-none bg-transparent text-lg"
+                      value={formData.phone}
+                      onChange={handleChange}
                       required
                     />
                   </div>
                   <textarea
+                    name="message"
                     placeholder="Your Message"
                     className="w-full border rounded-lg px-4 py-3 h-32 outline-none transition-all duration-300 focus:border-blue-500 text-lg"
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                   ></textarea>
-                  <button className="w-full bg-blue-900 text-white py-3 rounded-lg font-bold hover:bg-blue-800 transition text-lg shadow-md">
+
+                  <button
+                    className="w-full bg-blue-900 text-white py-3 rounded-lg font-bold hover:bg-blue-800 transition text-lg shadow-md"
+                    type="submit"
+                  >
                     Send Message
                   </button>
+
+                  {successMsg && (
+                    <p className="text-green-600 font-semibold mt-3">
+                      {successMsg}
+                    </p>
+                  )}
+                  {errorMsg && (
+                    <p className="text-red-600 font-semibold mt-3">
+                      {errorMsg}
+                    </p>
+                  )}
                 </form>
               </div>
             </div>
